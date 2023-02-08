@@ -1,0 +1,5 @@
+/Users/samirmagdy/Desktop/Ekar/EKarAutomation/src/test/java/testCases/PinDrop/TC003_VerifyThatTheLocationCanBeSetManuallyAndPinDropIsClickable.java
+/Users/samirmagdy/Desktop/Ekar/EKarAutomation/src/test/java/testCases/ComplainForm/TC002_CheckThatWhenUserUploadThreePhotosOnlyCanNotProceedToNextStep.java
+/Users/samirmagdy/Desktop/Ekar/EKarAutomation/src/test/java/testCases/ComplainForm/TC001_CheckThatUserCanUploadTheFourImagesAndProceedSuccessfully.java
+/Users/samirmagdy/Desktop/Ekar/EKarAutomation/src/test/java/testCases/PinDrop/TC002_VerifyThatUserCanAllowOrDenyPermissions.java
+/Users/samirmagdy/Desktop/Ekar/EKarAutomation/src/test/java/testCases/PinDrop/TC001_CheckPermissionsPopUpIsDisplayed.java

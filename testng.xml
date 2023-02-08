@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Suite" parallel="tests">
+    <test name="PinDropTestCases">
+        <classes>
+            <class name="testCases.PinDrop.TC001_CheckPermissionsPopUpIsDisplayed"/>
+            <class name="testCases.PinDrop.TC002_VerifyThatUserCanAllowOrDenyPermissions"/>
+            <class name="testCases.PinDrop.TC003_VerifyThatTheLocationCanBeSetManuallyAndPinDropIsClickable"/>
+        </classes>
+    </test>
+</suite> <!-- Suite -->
