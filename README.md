@@ -1,19 +1,50 @@
+EKar-Automation
+---------------
 Introduction
+------------
+This project is a mobile automation testing solution for a mobile application built with the Appium framework. The project leverages Java as the programming language, Maven for dependency management, and TestNG for the testing framework. The tests cover various functionalities of the mobile app, including location detection via pin drop, uploading of four images after pin drop, and ensuring that the user cannot proceed to the next step until all four images have been uploaded.
 
-EKar-Automation is an advanced mobile application testing project that leverages the power of Appium, Java, Maven, and TestNG. This project uses Object-Oriented Programming (OOP) concepts to design the testing suite and ensure maintainability, scalability, and reusability of the code. The tests validate the functionality of a mobile app by checking the user's location via pin drop, uploading four images after clicking on the pin drop, and ensuring that the user cannot proceed to the next step until four images have been uploaded.
+Prerequisite
+------------
 
-Prerequisites:
-Before executing the tests, make sure that your system meets the following requirements:
+Before running the tests, make sure you have the following components installed on your system:
 
-*Java 8 or later
-*Maven
-*Appium installed in the command line
-*An Android mobile device or emulator
-*Android SDK
-*A preferred IDE (IntelliJ or Eclipse)
-*TestNG
+-Java 8 or later
+
+-Maven
+
+-Appium installed in command line [As Appium runs programmatically]
+
+-Android mobile device or emulator
+
+-Android SDK
+
+-IDE (IntelliJ or Eclipse)
+
+-TestNG
+
+Built With
+-----------
+Appium - The mobile automation tool used
+
+Java - The programming language used
+
+Maven - The build automation tool used
+
+TestNG - The testing framework used
 
 
-Conclusion:
+OOP Implementation
+-------------------
 
-This project showcases the capabilities of Appium, Java, Maven, and TestNG in automating the testing of a mobile application. The OOP approach in designing the tests has several benefits including maintainability, scalability, and reusability of code. The tests provide detailed test results and reports to verify the functionality of the app, along with troubleshooting tips for common issues and errors that may arise during testing.
+The project has been implemented using Object-Oriented Programming (OOP) concepts, which provides several benefits to the project, including:
+
+-Better code organization and structure
+
+-Reusability of code
+
+-Improved code maintenance and testing
+
+-Enhanced code readability and understandability
+
+This professional approach to project implementation ensures that the code is scalable, maintainable, and easy to understand, making it easier to extend and update the project as required.
