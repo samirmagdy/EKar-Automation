@@ -29,7 +29,7 @@ public class MobileTestBase extends PageObjects {
         desiredCapabilities.setCapability("deviceName", "Galaxy A51");
         desiredCapabilities.setCapability("automationName", "UiAutomator2");
         desiredCapabilities.setCapability("app", "/Users/samirmagdy/eclipse-workspace/EkarDemoApp/src/test/resources/App/ekar-app-demo.apk");   //Change this path to the actual path of the APK on Your PC
-        desiredCapabilities.setCapability("appPackage", "in.testdemo.map");
+        desiredCapabilities.setCapability("appPackage", "in.testdemo.map");// if app already installed this one and the next one "appActivity" will be used instead of "app" Capability.
         desiredCapabilities.setCapability("appActivity", "in.testdemo.map.MainActivity");
         desiredCapabilities.setCapability("udid", "RZ8N1184NKD"); //Change UDID to the one of the device you will Use
         desiredCapabilities.setCapability("autoGrantPermissions", true);

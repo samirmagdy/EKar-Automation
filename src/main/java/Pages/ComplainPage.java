@@ -67,15 +67,7 @@ public class ComplainPage extends MobileTestBase {
         NxtButton.click();
     }
 
-    public void WriteInTextBox() throws InterruptedException {
-        Thread.sleep(10000);
-        swipeUntilElementDisplayed(NxtButton);
-        TxtBox.isDisplayed();
-        TxtBox.click();
-
-    }
-
-    public void sendTextToElement(String text) {
+    public void sendTextToElement(String text) { // faced problem with comment text box and can't be located with any other method than this one
         MobileElement TextBox = Driver.appium.findElementById("in.testdemo.map:id/cmd_txt");
         TextBox.setValue(text);
     }
