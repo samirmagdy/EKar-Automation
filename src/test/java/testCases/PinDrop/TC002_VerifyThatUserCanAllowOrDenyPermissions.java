@@ -11,7 +11,8 @@ import java.net.MalformedURLException;
 import java.net.URL;
 
 public class TC002_VerifyThatUserCanAllowOrDenyPermissions extends MobileTestBase {
-    private DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
+    private final DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
+
     @Test
     public void Step01_VerifyThatUserCanAllowPermissions() throws InterruptedException, MalformedURLException {
         desiredCapabilities.setCapability("autoGrantPermissions", false);
@@ -20,6 +21,7 @@ public class TC002_VerifyThatUserCanAllowOrDenyPermissions extends MobileTestBas
         PermissionsPopUpPageObject.CheckPermissionsPopUpIsDisplayed();
         PermissionsPopUpPageObject.AllowPermissions();
     }
+
     @Test(dependsOnMethods = "Step01_VerifyThatUserCanAllowPermissions")
     public void Step02_VerifyThatUserCanDenyPermissions() throws InterruptedException {
         Driver.appium.launchApp(); // to lunch app again and perform deny action

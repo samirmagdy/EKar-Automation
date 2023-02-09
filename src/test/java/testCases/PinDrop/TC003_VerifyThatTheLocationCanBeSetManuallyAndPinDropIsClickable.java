@@ -12,7 +12,7 @@ public class TC003_VerifyThatTheLocationCanBeSetManuallyAndPinDropIsClickable ex
     public void Step01_VerifyThatTheLocationCanBeSetManually() throws InterruptedException {
         PinDropPageObject = new PinDrop(Driver.appium);
         PermissionsPopUpPageObject = new PermissionsPopUp(Driver.appium);
-		//PermissionsPopUpPageObject.AllowPermissions(); /*This Function Not Used As there is Bug when Accepting Permissions Manually The Pin Drop Not Displayed*/
+        //PermissionsPopUpPageObject.AllowPermissions(); /*This Function Not Used As there is Bug when Accepting Permissions Manually The Pin Drop Not Displayed*/
         Location location = new Location(77.7749, -122.4194, 0);
         PinDropPageObject.TestLocation(location);
         PinDropPageObject.clickPinDropButton();

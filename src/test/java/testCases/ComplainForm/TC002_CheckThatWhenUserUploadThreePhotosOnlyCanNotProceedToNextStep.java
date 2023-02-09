@@ -7,8 +7,8 @@ import org.testng.annotations.Test;
 import testBase.Driver;
 import testBase.MobileTestBase;
 
-public class TC002_CheckThatWhenUserUploadThreePhotosOnlyCanNotProceedToNextStep extends MobileTestBase {
 
+public class TC002_CheckThatWhenUserUploadThreePhotosOnlyCanNotProceedToNextStep extends MobileTestBase {
     @Test
     public void Step01_PressOnPinDrop() throws InterruptedException {
         PinDropPageObject = new PinDrop(Driver.appium);
@@ -16,22 +16,26 @@ public class TC002_CheckThatWhenUserUploadThreePhotosOnlyCanNotProceedToNextStep
         PinDropPageObject.TestLocation(location);
         PinDropPageObject.clickPinDropButton();
     }
+
     @Test(dependsOnMethods = "Step01_PressOnPinDrop")
     public void Step02_AddComment() throws InterruptedException {
         Thread.sleep(7000);
         ComplainPageObject = new ComplainPage(Driver.appium);
         ComplainPageObject.sendTextToElement("Text To Be AE");
     }
+
     @Test(dependsOnMethods = "Step02_AddComment")
-    public void Step03_UploadFrontImage(){
+    public void Step03_UploadFrontImage() {
         ComplainPageObject.UploadFrontImgBtn();
         ComplainPageObject.SelectImageFromGallery();
     }
+
     @Test(dependsOnMethods = "Step03_UploadFrontImage")
-    public void Step04_UploadBackImage(){
+    public void Step04_UploadBackImage() {
         ComplainPageObject.UploadBackImgBtn();
         ComplainPageObject.SelectImageFromGallery();
     }
+
     @Test(dependsOnMethods = "Step04_UploadBackImage")
     public void Step05_UploadLeftImage() {
         ComplainPageObject.UploadLeftImgBtn();
@@ -39,8 +43,14 @@ public class TC002_CheckThatWhenUserUploadThreePhotosOnlyCanNotProceedToNextStep
     }
 
     @Test(dependsOnMethods = "Step05_UploadLeftImage")
-    public void Step06_PressNextButton(){
+    public void Step06_PressNextButton() throws InterruptedException {
         ComplainPageObject = new ComplainPage(Driver.appium);
         ComplainPageObject.PressOnNextBtn();
+    }
+
+    @Test(dependsOnMethods = "Step06_PressNextButton")
+    public void Step07_CheckThatRequestNotSubmittedSuccessfully() {
+        PinDropPageObject.CheckMapsIsDisplayed();
+        System.out.println("The Request Not Submitted And Error Toast Message is Displayed");
     }
 }

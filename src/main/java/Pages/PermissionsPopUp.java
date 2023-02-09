@@ -9,25 +9,23 @@ import testBase.MobileTestBase;
 
 public class PermissionsPopUp extends MobileTestBase {
 
-    public PermissionsPopUp(AppiumDriver<MobileElement> appium) {
-        PageFactory.initElements(new AppiumFieldDecorator(appium), this);
-    }
     //Locators
     @AndroidFindBy(id = "com.android.permissioncontroller:id/content_container")
     public MobileElement PermissionsPopUp;
-
     @AndroidFindBy(id = "com.android.permissioncontroller:id/permission_allow_foreground_only_button")
     public MobileElement WhileUsingThisAppBtn;
-
     @AndroidFindBy(id = "com.android.permissioncontroller:id/permission_allow_one_time_button")
     public MobileElement OnlyThisTimeBtn;
-
     @AndroidFindBy(id = "com.android.permissioncontroller:id/permission_deny_button")
     public MobileElement DontAllowBtn;
 
+    public PermissionsPopUp(AppiumDriver<MobileElement> appium) {
+        PageFactory.initElements(new AppiumFieldDecorator(appium), this);
+    }
+
     //Functions
     public void CheckPermissionsPopUpIsDisplayed() {
-        waitUntilElementDisplayed(PermissionsPopUp,10);
+        waitUntilElementDisplayed(PermissionsPopUp, 10);
         PermissionsPopUp.isDisplayed();
         System.out.println("Permission Pop-Up Displayed");
     }

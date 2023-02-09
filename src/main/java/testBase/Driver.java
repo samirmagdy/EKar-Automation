@@ -8,6 +8,5 @@ import org.openqa.selenium.WebDriver;
 public class Driver {
     public static AppiumDriver<MobileElement> appium = null;
     public static WebDriver seleniumDriver = null;
-
     public static AndroidDriver androidDriver = null;
 }

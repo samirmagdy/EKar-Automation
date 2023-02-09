@@ -10,67 +10,60 @@ import testBase.Driver;
 import testBase.MobileTestBase;
 
 public class ComplainPage extends MobileTestBase {
+    //Locators
+    @AndroidFindBy(id = "in.testdemo.map:id/front_img")
+    public MobileElement FrontImgBtn;
+    @AndroidFindBy(id = "in.testdemo.map:id/back_img")
+    public MobileElement BackImgBtn;
+    @AndroidFindBy(id = "in.testdemo.map:id/left_img")
+    public MobileElement LeftImgBtn;
+    @AndroidFindBy(id = "in.testdemo.map:id/right_img")
+    public MobileElement RightImgBtn;
+    @AndroidFindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.ListView/android.widget.TextView[1]")
+    public MobileElement SelectFromGallery;
+    @AndroidFindBy(xpath = "(//android.widget.FrameLayout[@content-desc=\"Button\"])[1]/android.widget.FrameLayout[1]/android.widget.ImageView")
+    public MobileElement SelectedImage;
+    @AndroidFindBy(xpath = "in.testdemo.map:id/cmd_txt")
+    public WebElement TxtBox;
+    @AndroidFindBy(id = "in.testdemo.map:id/next_btn")
+    public MobileElement NxtButton;
+    MobileElement TextBox = Driver.appium.findElementById("in.testdemo.map:id/cmd_txt");
+
     public ComplainPage(AppiumDriver<MobileElement> appium) {
         PageFactory.initElements(new AppiumFieldDecorator(appium), this);
     }
 
-    //Locators
-    @AndroidFindBy(id = "in.testdemo.map:id/front_img")
-    public MobileElement FrontImgBtn;
-
-    @AndroidFindBy(id = "in.testdemo.map:id/back_img")
-    public MobileElement BackImgBtn;
-
-    @AndroidFindBy(id = "in.testdemo.map:id/left_img")
-    public MobileElement LeftImgBtn;
-
-    @AndroidFindBy(id = "in.testdemo.map:id/right_img")
-    public MobileElement RightImgBtn;
-
-    @AndroidFindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.ListView/android.widget.TextView[1]")
-    public MobileElement SelectFromGallery;
-
-    @AndroidFindBy(xpath = "(//android.widget.FrameLayout[@content-desc=\"Button\"])[1]/android.widget.FrameLayout[1]/android.widget.ImageView")
-    public MobileElement SelectedImage;
-
-    @AndroidFindBy(xpath = "in.testdemo.map:id/cmd_txt")
-    public WebElement TxtBox;
-
-    MobileElement TextBox = Driver.appium.findElementById("in.testdemo.map:id/cmd_txt");
-
-    @AndroidFindBy(id = "in.testdemo.map:id/next_btn")
-    public MobileElement NxtButton;
-
-
-
     //Functions
-
-    public void UploadFrontImgBtn(){
-        waitUntilElementDisplayed(FrontImgBtn,10);
+    public void UploadFrontImgBtn() {
+        waitUntilElementDisplayed(FrontImgBtn, 10);
         FrontImgBtn.click();
     }
-    public void UploadBackImgBtn(){
-        waitUntilElementDisplayed(BackImgBtn,10);
+
+    public void UploadBackImgBtn() {
+        waitUntilElementDisplayed(BackImgBtn, 10);
         BackImgBtn.click();
     }
-    public void UploadLeftImgBtn(){
-        waitUntilElementDisplayed(LeftImgBtn,10);
+
+    public void UploadLeftImgBtn() {
+        waitUntilElementDisplayed(LeftImgBtn, 10);
         LeftImgBtn.click();
     }
-    public void UploadRightImgBtn(){
-        waitUntilElementDisplayed(RightImgBtn,10);
+
+    public void UploadRightImgBtn() {
+        waitUntilElementDisplayed(RightImgBtn, 10);
         RightImgBtn.click();
     }
-    public void SelectImageFromGallery(){
-        waitUntilElementDisplayed(SelectFromGallery,10);
+
+    public void SelectImageFromGallery() {
+        waitUntilElementDisplayed(SelectFromGallery, 10);
         SelectFromGallery.click();
-        waitUntilElementDisplayed(SelectedImage,10);
+        waitUntilElementDisplayed(SelectedImage, 10);
         SelectedImage.click();
     }
 
-    public void PressOnNextBtn(){
+    public void PressOnNextBtn() {
         swipeUntilElementDisplayed(NxtButton);
-        waitUntilElementDisplayed(NxtButton,10);
+        waitUntilElementDisplayed(NxtButton, 10);
         NxtButton.click();
     }
 
